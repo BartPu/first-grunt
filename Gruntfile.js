@@ -18,19 +18,19 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'images/',
                     src: ['**/*.{png,jpg,gif}'],
-                    dest: 'images/build/',
+                    dest: 'images/build/'
                 }]
             }
-        }
+        },
         watch: {
             scripts: {
                 files: ['sass/*.sass'],
                 tasks: ['sass'],
                 options: {
                     spawn: false,
-                },
+                }
             }
-        }
+        },
     });
     // Load the plugins tasks
     grunt.loadNpmTasks('grunt-sass');
