@@ -1,0 +1,23 @@
+{
+  "name": "first-grunt",
+  "version": "1.0.0",
+  "description": "First grunt project",
+  "main": "gruntfile.js\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[G",
+  "scripts": {
+    "test": "grunt-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Bartek Puchalski",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-sass": "^2.0.0"
+  }
+}
