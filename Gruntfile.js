@@ -33,7 +33,7 @@ module.exports = function(grunt) {
         },
         browserSync: {
             bsFiles: {
-                src: 'assets/css/*.css'
+                src: '*.css'
             },
             options: {
                 server: {
