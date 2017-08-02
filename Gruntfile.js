@@ -8,7 +8,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'main.css': 'main.sass'
+                    'css/main.css': 'sass/main.sass'
                 }
             }
         },
@@ -24,11 +24,24 @@ module.exports = function(grunt) {
         },
         watch: {
             scripts: {
-                files: ['*/*'],
+                files: ['sass/*.sass'],
                 tasks: ['sass'],
                 options: {
                     spawn: false,
-                    livereload: true,
+                }
+            }
+        },
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src: [
+                        'css/*.css',
+                        '*.html'
+                    ]
+                },
+                options: {
+                    watchTask: true,
+                    server: './app'
                 }
             }
         },
@@ -37,7 +50,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-browser-sync')
     // Default task(s).
 
-    grunt.registerTask('default', ['sass', 'imagemin', 'watch']);
+    grunt.registerTask('default', ['sass', 'imagemin', 'browserSync', 'watch']);
 };
